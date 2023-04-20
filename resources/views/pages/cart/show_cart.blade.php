@@ -27,11 +27,13 @@
 			<tbody>
 				@foreach($content as $v_content)
 				<tr>
-					<td class="cart_product">
-						<a href=""><img src="{{URL::to('public/upload/product/'.$v_content->options->image)}}" width="70" alt=""></a>
+					<td class="cart_product">					
+						<a href="">
+							<img src="{{URL::to('public/upload/product/'.$v_content->options->image)}}" width="70" alt="">
+						</a>
 					</td>
 					<td class="cart_description">
-						<h4><a href="">{{$v_content->name}}</a></h4>
+						<h4>{{$v_content->name}}</h4>
 						<p>ID Sản Phẩm: {{$v_content->id}}</p>
 					</td>
 					<td class="cart_price">

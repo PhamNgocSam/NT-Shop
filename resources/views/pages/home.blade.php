@@ -30,7 +30,7 @@
 					<div class="choose">
 						<ul class="nav nav-pills nav-justified">
 							<li><a href="{{ url('/add-to-favorites', $product->product_id) }}"><i class="fa fa-plus-square"></i>Yêu Thích</a></li>
-							<li><a href="#"><i class="fa fa-plus-square"></i>So Sánh</a></li>
+							<li><a href=""><i class="fa fa-plus-square"></i>Thêm Giỏ</a></li>
 						</ul>
 					</div>
 				</div>

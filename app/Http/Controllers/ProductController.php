@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
+use Gloudemans\Shoppingcart\Facades\Cart;
 session_start();
 
 class ProductController extends Controller
@@ -191,5 +192,15 @@ class ProductController extends Controller
         $products = DB::table('tbl_product')->whereIn('product_id', $favorites)->get();
 
         return view('pages.sanpham.favorites', compact('products'))->with('category',$cate_product)->with('brand',$brand_product);
+    }
+
+    public function delete_to_favorites($product_id)
+    {
+        $favorites = session()->get('favorites', []);
+        if (($key = array_search($product_id, $favorites)) !== false) {
+            unset($favorites[$key]);
+            session()->put('favorites', $favorites);
+        }
+        return redirect()->back()->with('success', 'Sản phẩm đã được xóa khỏi danh sách yêu thích.'); 
     }
 }

@@ -53,7 +53,7 @@
 				</span>
 			</form>
 
-			<p><b>Điều Kiện:</b> Còn hàng</p>
+			<p><b>Sản Phẩm Có Sẵn: </b>	{{$value->product_quantity}}</p>
 			<p><b>Tình Trạng:</b> Mới 100%</p>
 			<p><b>Danh Mục:</b> {{$value->category_name}}</p>
 			<p><b>Thương Hiệu:</b> {{$value->brand_name}}</p>

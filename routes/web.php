@@ -51,6 +51,7 @@ Route::get('/chi-tiet-san-pham/{product_id}', [ProductController::class, 'detail
 //sản phẩm yêu thích
 Route::get('/add-to-favorites/{product_id}', [ProductController::class, 'add_to_favorites']);
 Route::get('/favorites', [ProductController::class, 'favorites']);
+Route::get('/delete-to-favorites/{product_id}', [ProductController::class, 'delete_to_favorites']);
 
 
 //cart
