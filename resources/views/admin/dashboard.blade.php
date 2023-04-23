@@ -11,8 +11,8 @@
 					</div>
 					 <div class="col-md-8 market-update-left">
 					 <h4>Visitors</h4>
-					<h3>13,500</h3>
-					<p>Other hand, we denounce</p>
+					<h3>320</h3>
+					<p>Số lượng người xem</p>
 				  </div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -24,8 +24,8 @@
 					</div>
 					<div class="col-md-8 market-update-left">
 					<h4>Users</h4>
-						<h3>1,250</h3>
-						<p>Other hand, we denounce</p>
+						<h3>{{ $total_users }}</h3>
+						<p>Tài khoản người dùng</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -37,8 +37,8 @@
 					</div>
 					<div class="col-md-8 market-update-left">
 						<h4>Sales</h4>
-						<h3>1,500</h3>
-						<p>Other hand, we denounce</p>
+						<h3>{{ $total_sold }}</h3>
+						<p>Số lượng hàng đã bán</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
@@ -50,8 +50,8 @@
 					</div>
 					<div class="col-md-8 market-update-left">
 						<h4>Orders</h4>
-						<h3>1,500</h3>
-						<p>Other hand, we denounce</p>
+						<h3>{{ $total_orders }}</h3>
+						<p>Số lượng đơn hàng</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>

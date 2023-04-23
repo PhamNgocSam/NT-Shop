@@ -190,9 +190,9 @@
 							<div class="item active">
 								<div class="col-sm-6">
 									<h1><span>NT</span>-STORE</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<h2>Super BrandDay</h2>
+									<p>Ngày siêu thương hiệu với các sản phẩm mới và rất nhiều quà tặng hấp dẫn đang chờ các bạn. Vào xem ngay thôi nào! </p>
+									<button type="button" class="btn btn-default get">Xem ngay</button>
 								</div>
 								<div class="col-sm-6">
 									<img style="width:400px; height:420px;" src="{{URL::to('public/frontend/images/a1.jpg')}}" class="girl img-responsive" alt="" />									
@@ -202,9 +202,9 @@
 							<div class="item">
 								<div class="col-sm-6">
 									<h1><span>NT</span>-STORE</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<h2>Đại lễ Sale to</h2>
+									<p>Cơ hội nhận được voucher giảm giá đặc biệt lên đến 5 triệu khi mua các sản phẩm của Shop. </p>
+									<button type="button" class="btn btn-default get">Xem ngay</button>
 								</div>
 								<div class="col-sm-6">
 									<img style="width:400px; height:420px;" src="{{URL::to('public/frontend/images/a2.jpg')}}" class="girl img-responsive" alt="" />
@@ -214,9 +214,11 @@
 							<div class="item">
 								<div class="col-sm-6">
 									<h1><span>NT</span>-STORE</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<h2>Tủ Lạnh Panasonic 167L Inverter</h2>
+									<h3>Giá chỉ 12,500k. </h3>
+									<p>Bộ lọc tinh thể bạc AG Clean kháng khuẩn bảo vệ sức khỏe</p>									
+									<p>Tiết kiệm điện năng tối ưu nhờ công nghệ Econavi Inverter</p>
+									<button type="button" class="btn btn-default get">Xem ngay</button>
 								</div>
 								<div class="col-sm-6">
 									<img style="width:400px; height:420px;" src="{{URL::to('public/frontend/images/a1.png')}}" class="girl img-responsive" alt="" />
@@ -299,7 +301,7 @@
 					<div class="col-sm-2">
 						<div class="companyinfo">
 							<h2><span>NT</span>-STORE</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<p>Mọi người có thể xem thêm các chính sách, dịch vụ của cửa hàng ở dưới đây.</p>
 						</div>
 					</div>
 					<div class="col-sm-7">
@@ -313,8 +315,8 @@
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Sản Phẩm Mới</p>
+								<h2>28 April 2023</h2>
 							</div>
 						</div>
 						
@@ -328,8 +330,8 @@
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Sản Phẩm Mới</p>
+								<h2>24 April 2023</h2>
 							</div>
 						</div>
 						
@@ -343,8 +345,8 @@
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Sản Phẩm Mới</p>
+								<h2>12 March 2023</h2>
 							</div>
 						</div>
 						
@@ -358,15 +360,15 @@
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Sản Phẩm Mới</p>
+								<h2>03 May 2023</h2>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
 							<img src="{{URL::to('public/frontend/images/map.png')}}" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+							<p>NT-Store vươn tầm thế giới</p>
 						</div>
 					</div>
 				</div>
@@ -392,10 +394,10 @@
 						<div class="single-widget">
 							<h2>Thể Loại</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">PC</a></li>
+								<li><a href="#">Smart Tivi</a></li>
 								<li><a href="#">Laptop</a></li>
-								<li><a href="#">Điện thoại</a></li>
-								<li><a href="#">Đồ điện tử</a></li>
+								<li><a href="#">Điều hòa</a></li>
+								<li><a href="#">Tủ lạnh</a></li>
 								<li><a href="#">Khác</a></li>
 							</ul>
 						</div>

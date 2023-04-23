@@ -11,6 +11,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -85,6 +86,10 @@ Route::get('/Admin', [AdminController::class, 'index']);
 Route::get('/Dashboard', [AdminController::class, 'show_dashboard']);
 Route::get('/logout', [AdminController::class, 'logout']);
 Route::post('/admin-dashboard', [AdminController::class, 'dashboard']);
+
+
+//Dashboard
+Route::get('/Dashboard', [DashboardController::class, 'index']);
 
 
 //category product
