@@ -48,6 +48,8 @@
                   @if($order->order_status==1)
                     Đang chờ xử lý!
                   @elseif($order->order_status==2)
+                    Đang giao hàng!
+                  @elseif($order->order_status==3)
                     Giao hàng thành công!
                   @else
                     Hủy đơn hàng!

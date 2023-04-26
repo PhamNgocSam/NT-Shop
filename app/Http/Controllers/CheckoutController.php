@@ -114,7 +114,7 @@ class CheckoutController extends Controller
 
         //insert order
         $order_data = array();
-        $order_data['order_total'] = Cart::total(0);
+        $order_data['order_total'] = str_replace(',', '', Cart::total(0));
         $order_data['order_status'] = 1;
         $order_data['user_id'] = Session::get('user_id');
         $order_data['shipping_id'] = Session::get('shipping_id');
@@ -321,6 +321,6 @@ class CheckoutController extends Controller
         // Cập nhật trạng thái đơn hàng trong CSDL
         $result = DB::table('tbl_order')->where('order_id', $order_id)->update(['order_status' => $order_status]);
 
-        return view('admin_layout')->with('admin.view_order', $result);
+        return Redirect::to('/manage-order');
     }               
 }

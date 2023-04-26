@@ -3,27 +3,42 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        // if (Auth::check()) {
-        //     $user_id = Auth::user()->id;
-        // } else {
-        //     $user_id = null;
-        // }
-        
-        // DB::table('tbl_visitors')->updateOrInsert(
-        //     ['user_id' => $user_id],
-        //     ['view_count' => DB::raw('view_count + 1')]
-        // );
-        // $view_count = DB::table('tbl_visitors')->where('user_id', $user_id)->value('view_count');
-        
+        $ip_address = $request->ip();
+        $visit_date = now();
+
+        DB::table('tbl_visitors')->insert([
+            'ip_address' => $ip_address,
+            'visit_date' => $visit_date
+        ]);
+
+        $visitor_count = DB::table('tbl_visitors')->distinct('ip_address')->count('ip_address');
+        $visitor_count = DB::table('tbl_visitors')->count();
+
         $total_users = DB::table('tbl_user')->count();
         $total_orders = DB::table('tbl_order')->count();
         $total_sold = DB::table('tbl_order_details')->sum('product_sales_quantity');
-        return view('admin.dashboard', compact( 'total_users', 'total_orders', 'total_sold'));
+
+        $orders_day = DB::table('tbl_order')
+            ->select(DB::raw('SUM(order_total) as total'), DB::raw('DATE(created_at) as date'))
+            ->groupBy('date')
+            ->get();
+
+        $orders_month = DB::table('tbl_order')
+        ->select(DB::raw('MONTH(created_at) as month'), DB::raw('SUM(order_total) as total'))
+        ->groupBy(DB::raw('MONTH(created_at)'))
+        ->orderBy(DB::raw('MONTH(created_at)'))
+        ->get();
+
+        // Chuyển dữ liệu sang dạng JSON để truyền cho view
+        $data = json_encode($orders_month);
+        $data1 = json_encode($orders_day);
+        
+        return view('admin.dashboard', compact('data','data1', 'visitor_count', 'total_users', 'total_orders', 'total_sold'));
     }
 }

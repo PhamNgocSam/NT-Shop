@@ -87,8 +87,9 @@
                                 <select style="height: 26px; width: 250px;" name="order_status">
                                     <option value="">---Chọn hình thức đơn hàng---</option>
                                     <option value="1">Đang chờ xử lý!</option>
-                                    <option value="2">Giao hàng thành công!</option>
-                                    <option value="3">Hủy đơn hàng!</option>                                   
+                                    <option value="2">Đang giao hàng!</option>
+                                    <option value="3">Giao hàng thành công!</option>
+                                    <option value="4">Hủy đơn hàng!</option>                                   
                                 </select>
                                 <button type="submit">Cập nhật</button>
                             </form>

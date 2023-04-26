@@ -186,36 +186,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="{{asset('public/backend/js/jquery.scrollTo.js')}}"></script>
 <script src="{{asset('public/backend/ckeditor/ckeditor.js')}}"></script>
-
-<!-- <script type="text/javascript">
-    $('.order-details').change(function(){
-        var order_status = $(this).val();
-        var order_id = $(this).children(":selected").attr("id");
-        var _token = $('input[name="_token"]').val();
-
-        //lay ra so luong
-        quantity = [];
-        $("input[name='product_sales_quantity']").each(function(){
-            quantity.push($(this).val());
-        });
-
-        //lay ra id san pham
-        order_product_id = [];
-        $("input[name='order_product_id']").each(function(){
-            order_product_id.push($(this).val());
-        });
-
-        $.ajax({
-            url: `{{url('/update-order-qty')}}`,
-            method: 'POST',
-            data: {_token:_token, order_status:order_status, order_id:order_id, quantity:quantity, order_product_id:order_product_id},
-            success:function(data){
-                alert('Chuyển trạng thái đơn hàng thành công!');
-                location.reload();
-            }
-        });
-    });
-</script> -->
+<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js')}}"></script>
+<script src="{{ asset('chart.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script type="text/javascript">
     CKEDITOR.replace('ckeditor');

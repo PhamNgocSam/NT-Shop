@@ -11,7 +11,7 @@
 					</div>
 					 <div class="col-md-8 market-update-left">
 					 <h4>Visitors</h4>
-					<h3>320</h3>
+					 <h3>{{ $visitor_count }}</h3>
 					<p>Số lượng người xem</p>
 				  </div>
 				  <div class="clearfix"> </div>
@@ -64,16 +64,88 @@
 				<div class="col-md-12 w3ls-graph">
 					<!--agileinfo-grap-->
 						<div class="agileinfo-grap">
-							<div class="agileits-box">
+							<div class="agileits-box">								
 								<header class="agileits-box-header clearfix">
-									<h3>Visitor Statistics</h3>
-										<div class="toolbar">
-											
+									<h3>Doanh thu theo ngày</h3>								
+										<div class="toolbar">											
 											
 										</div>
 								</header>
+								<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 								<div class="agileits-box-body clearfix">
-									<div id="hero-area"></div>
+								
+								<div >
+									<canvas id="chart1"></canvas>
+									<script>
+										// Lấy dữ liệu biểu đồ từ controller truyền sang view
+										var data1 = {!! $data1 !!};
+
+										// Tạo biểu đồ Bar Chart
+										var ctx = document.getElementById('chart1').getContext('2d');
+										var chart1 = new Chart(ctx, {
+											type: 'bar',
+											data: {
+												labels: data1.map(item => 'Ngày ' + item.date),
+												datasets: [{
+													label: 'Tổng đơn hàng (VND)',
+													data: data1.map(item => item.total),
+													backgroundColor: 'red',
+													borderColor: 'rgba(75, 192, 192, 1)',
+													borderWidth: 1
+												}]
+											},
+											options: {
+												scales: {
+													y: {
+														beginAtZero: true,
+														max: Math.max(...data1.map(item => item.total)) + 100000 // Tùy chỉnh giá trị y tối đa
+													}
+												}
+											}
+										});
+									</script>
+    							</div>
+								
+								<br><br>
+								<header class="agileits-box-header clearfix">
+									<h3>Doanh thu theo tháng</h3>								
+										<div class="toolbar">											
+											
+										</div>
+								</header>
+								<div >
+									<canvas id="chart"></canvas>
+									<script>
+										// Lấy dữ liệu biểu đồ từ controller truyền sang view
+										var data = {!! $data !!};
+
+										// Tạo biểu đồ Bar Chart
+										var ctx = document.getElementById('chart').getContext('2d');
+										var chart = new Chart(ctx, {
+											type: 'bar',
+											data: {
+												labels: data.map(item => 'Tháng ' + item.month),
+												datasets: [{
+													label: 'Tổng đơn hàng (VND)',
+													data: data.map(item => item.total),
+													backgroundColor: 'red',
+													borderColor: 'rgba(75, 192, 192, 1)',
+													borderWidth: 1
+												}]
+											},
+											options: {
+												scales: {
+													y: {
+														beginAtZero: true,
+														max: Math.max(...data.map(item => item.total)) + 1000000 // Tùy chỉnh giá trị y tối đa
+													}
+												}
+											}
+										});
+									</script>
+    							</div>
+								
+								
 								</div>
 							</div>
 						</div>
