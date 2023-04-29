@@ -90,7 +90,19 @@ class CategoryProduct extends Controller
     public function delete_category_product($category_product_id)
     {
         $this->AuthLogin();
-        DB::table('tbl_category_product')->where('category_id',$category_product_id)->delete();
+        $category_product = DB::table('tbl_category_product')->where('category_id', $category_product_id)->first();
+        if (!$category_product) {
+            Session::put('message', 'Danh mục sản phẩm không tồn tại!');
+            return Redirect::to('all-category-product');
+        }
+
+        $product = DB::table('tbl_product')->where('category_id', $category_product->category_id)->first();
+        if ($product) {
+            Session::put('message', 'Không thể xóa danh mục sản phẩm có sản phẩm đang bán!');
+            return Redirect::to('all-category-product');
+        }
+
+        DB::table('tbl_category_product')->where('category_id', $category_product_id)->delete();
         Session::put('message', 'Xóa danh mục sản phẩm thành công!');
         return Redirect::to('all-category-product');
     }

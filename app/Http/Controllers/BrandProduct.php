@@ -88,7 +88,19 @@ class BrandProduct extends Controller
     public function delete_brand_product($brand_product_id)
     {
         $this->AuthLogin();
-        DB::table('tbl-brand')->where('brand_id',$brand_product_id)->delete();
+        $brand_product = DB::table('tbl-brand')->where('brand_id', $brand_product_id)->first();
+        if (!$brand_product) {
+            Session::put('message', 'Thương hiệu sản phẩm không tồn tại!');
+            return Redirect::to('all-brand-product');
+        }
+
+        $product = DB::table('tbl_product')->where('brand_id', $brand_product->brand_id)->first();
+        if ($product) {
+            Session::put('message', 'Không thể xóa thương hiệu sản phẩm có sản phẩm đang bán!');
+            return Redirect::to('all-brand-product');
+        }
+
+        DB::table('tbl-brand')->where('brand_id', $brand_product_id)->delete();
         Session::put('message', 'Xóa thương hiệu sản phẩm thành công!');
         return Redirect::to('all-brand-product');
     }

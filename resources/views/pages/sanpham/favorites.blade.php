@@ -44,7 +44,7 @@
                                     <p>{{number_format($product->product_price).' '.'vnd'}}</p>
                                 </td>                       
                                 <td class="cart_delete">
-                                    <a class="cart_quantity_delete" href="{{URL::to('/delete-to-favorites/'.$product->product_id)}}"><i class="fa fa-times text-danger text"></i></a>
+                                    <a onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này khỏi danh sách yêu thích không?')" class="cart_quantity_delete" href="{{URL::to('/delete-to-favorites/'.$product->product_id)}}"><i class="fa fa-times text-danger text"></i></a>
                                 </td>
                             </tr>	
                     </form>

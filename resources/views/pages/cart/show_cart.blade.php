@@ -58,7 +58,7 @@
 						</p>
 					</td>
 					<td class="cart_delete">
-						<a class="cart_quantity_delete" href="{{URL::to('/delete-to-cart/'.$v_content->rowId)}}"><i class="fa fa-times text-danger text"></i></a>
+						<a onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng không?')" class="cart_quantity_delete" href="{{URL::to('/delete-to-cart/'.$v_content->rowId)}}"><i class="fa fa-times text-danger text"></i></a>
 					</td>
 				</tr>	
 				@endforeach					
