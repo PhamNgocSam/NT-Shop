@@ -1,10 +1,6 @@
 @extends('welcome')
 @section('content')
 
-<section id="cart_items">
-    <div class="review-payment">
-        <h2>Cảm ơn bạn đã đặt hàng ở chỗ chúng tôi, chúng tôi sẽ liên hệ với bạn sớm nhất!</h2>
-    </div>
-</section>
+<h2>Cảm ơn bạn đã đặt hàng! Chúng tôi sẽ giao hàng đến bạn nhanh nhất có thể!</h2>
 
 @endsection

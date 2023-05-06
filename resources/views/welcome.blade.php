@@ -84,7 +84,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="{{URL::to('/favorites')}}"><i class="fa fa-star"></i>Yêu Thích</a></li>
+								<li><a href="{{URL::to('/order-place')}}"><i class="fa fa-star"></i>Đơn Hàng</a></li>								
 
 								<?php
 									use Illuminate\Support\Facades\Session;
@@ -147,7 +147,7 @@
 								<li class="dropdown"><a href="#">Cửa Hàng<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="{{URL::to('/')}}">Sản Phẩm</a></li>
-										<li><a href="{{URL::to('/show-cart')}}">Giỏ Hàng</a></li> 
+										<li><a href="{{URL::to('/favorites')}}">Yêu Thích</a></li>
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Tin Tức<i class="fa fa-angle-down"></i></a>

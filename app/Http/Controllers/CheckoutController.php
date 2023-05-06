@@ -145,7 +145,6 @@ class CheckoutController extends Controller
 
             return view('pages.checkout.handcash')->with('category',$cate_product)->with('brand',$brand_product);
         }
-        //return Redirect::to('/payment');
     }
 
     public function manage_order()
@@ -313,7 +312,7 @@ class CheckoutController extends Controller
         return (new FastExcel($order))->export('order.xlsx');
     }
 
-    //update hàng tồn kho
+    //Cập nhật trạng thái đơn hàng
     public function update_order_qty(Request $request){
         $order_id = $request->input('order_id');
         $order_status = $request->input('order_status');
