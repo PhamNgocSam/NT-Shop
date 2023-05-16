@@ -37,8 +37,8 @@
 					</div>
 					<div class="col-md-8 market-update-left">
 						<h4>Sales</h4>
-						<h3>{{ $total_sold }}</h3>
-						<p>Số lượng hàng đã bán</p>
+						<h3>{{ number_format($total_sold) }}</h3>
+						<p>Doanh thu (VND)</p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>

@@ -22,7 +22,7 @@ class DashboardController extends Controller
 
         $total_users = DB::table('tbl_user')->count();
         $total_orders = DB::table('tbl_order')->count();
-        $total_sold = DB::table('tbl_order_details')->sum('product_sales_quantity');
+        $total_sold = DB::table('tbl_order')->sum('order_total');
 
         $orders_day = DB::table('tbl_order')
             ->select(DB::raw('SUM(order_total) as total'), DB::raw('DATE(created_at) as date'))

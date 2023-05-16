@@ -84,7 +84,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="{{URL::to('/order-place')}}"><i class="fa fa-star"></i>Đơn Hàng</a></li>								
+								<li><a href="{{URL::to('/favorites')}}"><i class="fa fa-star"></i>Yêu Thích</a></li>								
 
 								<?php
 									use Illuminate\Support\Facades\Session;
